@@ -30,6 +30,16 @@ public class MyActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void clearSum(View view){
+        Numbers.deleteAll(Numbers.class);
+    }
+
+    public void calculateSum(View view){
+        Intent intent = new Intent(this, SumActivity.class);
+
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

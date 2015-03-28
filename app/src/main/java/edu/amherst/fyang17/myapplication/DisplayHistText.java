@@ -15,8 +15,13 @@ public class DisplayHistText extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        Numbers num = new Numbers();
-        textView.setText(Integer.toString(num.sum));
+        String message="";
+        java.util.List<Numbers> list = Numbers.listAll(Numbers.class);
+        for (int i=0;i<list.size();i++){
+            String toAdd = "  "+Integer.toString(list.get(i).sum);
+            message = message+toAdd;
+        }
+        textView.setText(message);
         setContentView(textView);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

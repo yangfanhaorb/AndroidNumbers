@@ -9,4 +9,5 @@
 
     <string name="hello_world">Not sure whats going on!</string>
     <string name="title_activity_display_hist_text">DisplayHistText</string>
+    <string name="title_activity_sum">sumActivity</string>
 </resources>
