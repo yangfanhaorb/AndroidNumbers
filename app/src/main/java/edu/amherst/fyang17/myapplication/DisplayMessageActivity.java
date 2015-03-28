@@ -15,7 +15,9 @@ public class DisplayMessageActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
-        DisplayHistText.history = DisplayHistText.history + Integer.parseInt(message);
+        Numbers num = Numbers.findById(Numbers.class,(long)1);
+        num.sum = num.sum + Integer.parseInt(message);
+        num.save();
         TextView textView = new TextView(this);
         message = "added " + message;
         textView.setTextSize(40);

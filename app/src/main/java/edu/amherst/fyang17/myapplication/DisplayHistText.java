@@ -10,13 +10,13 @@ import android.widget.TextView;
 
 public class DisplayHistText extends ActionBarActivity {
 
-    public static int history = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        textView.setText(Integer.toString(history));
+        Numbers num = new Numbers();
+        textView.setText(Integer.toString(num.sum));
         setContentView(textView);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
